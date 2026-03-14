@@ -2,14 +2,11 @@
 
 namespace ChessUniverse.Library;
 
-public class Piece(PieceColor color, PieceType type)
+public abstract class Piece(PieceColor color)
 {
     public PieceColor Color { get; } = color;
-    public PieceType Type { get; } = type;
-    
+    //public PieceType Type { get; } = type;
 
-    public virtual char GetSymbol()
-    {
-        return '?';
-    }
+
+    public abstract char GetSymbol();
 }

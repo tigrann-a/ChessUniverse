@@ -2,7 +2,7 @@
 
 namespace ChessUniverse.Library.Pieces;
 
-public class Pawn(PieceColor color) : Piece(color, PieceType.Pawn)
+public class Pawn(PieceColor color) : Piece(color)
 {
     public override char GetSymbol() => Color == PieceColor.white ? 'P' : 'p';
 }
