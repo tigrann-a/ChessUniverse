@@ -2,10 +2,11 @@
 
 namespace ChessUniverse.Library;
 
-public abstract class Piece(PieceColor color, Coords position)
+public abstract class Piece(PieceType type, PieceColor color, Coords position)
 {
     public PieceColor Color { get; } = color;
-    //public PieceType Type { get; } = type;
+    public PieceType Type { get; } = type;
+    public Coords Position { get; } = position;
 
 
     public abstract char GetSymbol();

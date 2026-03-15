@@ -36,46 +36,45 @@ public class ChessBoard
         Array.Clear(_squares, 0, _squares.Length);
 
         Coords position = new Coords(0, 0); // A8
-        _squares[position.x, position.y] = new Rook(PieceColor.black, position);
+        _squares[position.x, position.y] = new Rook(PieceType.Rook, PieceColor.black, position);
         position = new Coords(0, 1);
-        _squares[position.x, position.y] = new Knight(PieceColor.black, position);
+        _squares[position.x, position.y] = new Knight(PieceType.Knight, PieceColor.black, position);
         position = new Coords(0, 2);
-        _squares[0, 2] = new Bishop(PieceColor.black, position);
+        _squares[position.x, position.y] = new Bishop(PieceType.Bishop, PieceColor.black, position);
         position = new Coords(0, 3);
-        _squares[0, 3] = new Queen(PieceColor.black, position);
+        _squares[position.x, position.y] = new Queen(PieceType.Queen, PieceColor.black, position);
         position = new Coords(0, 4);
-        _squares[0, 4] = new King(PieceColor.black, position);
+        _squares[position.x, position.y] = new King(PieceType.King, PieceColor.black, position);
         position = new Coords(0, 5);
-        _squares[0, 5] = new Bishop(PieceColor.black, position);
+        _squares[position.x, position.y] = new Bishop(PieceType.Bishop, PieceColor.black, position);
         position = new Coords(0, 6);
-        _squares[0, 6] = new Knight(PieceColor.black, position);
+        _squares[position.x, position.y] = new Knight(PieceType.Knight, PieceColor.black, position);
         position = new Coords(0, 7);
-        _squares[0, 7] = new Rook(PieceColor.black, position);
+        _squares[position.x, position.y] = new Rook(PieceType.Rook, PieceColor.black, position);
 
         for (int col = 0; col < 8; col++)
         {
             position = new Coords(1, col);
-            _squares[1, col] = new Pawn(PieceColor.black, position);
-            Pawn.IsMovePossible(position.x, position.y);
+            _squares[1, col] = new Pawn(PieceType.Pawn, PieceColor.black, position);
             position = new Coords(6, col);
-            _squares[6, col] = new Pawn(PieceColor.white, position);
+            _squares[6, col] = new Pawn(PieceType.Pawn, PieceColor.white, position);
         }
 
         position = new Coords(7, 0); // A1
-        _squares[7, 0] = new Rook(PieceColor.white, position); // A1
+        _squares[position.x, position.y] = new Rook(PieceType.Rook, PieceColor.white, position); // A1
         position = new Coords(7, 1);
-        _squares[7, 1] = new Knight(PieceColor.white, position);
+        _squares[position.x, position.y] = new Knight(PieceType.Knight, PieceColor.white, position);
         position = new Coords(7, 2);
-        _squares[7, 2] = new Bishop(PieceColor.white, position);
+        _squares[position.x, position.y] = new Bishop(PieceType.Bishop, PieceColor.white, position);
         position = new Coords(7, 3);
-        _squares[7, 3] = new Queen(PieceColor.white, position);
+        _squares[position.x, position.y] = new Queen(PieceType.Queen, PieceColor.white, position);
         position = new Coords(7, 4);
-        _squares[7, 4] = new King(PieceColor.white, position);
+        _squares[position.x, position.y] = new King(PieceType.King, PieceColor.white, position);
         position = new Coords(7, 5);
-        _squares[7, 5] = new Bishop(PieceColor.white, position);
+        _squares[position.x, position.y] = new Bishop(PieceType.Bishop, PieceColor.white, position);
         position = new Coords(7, 6);
-        _squares[7, 6] = new Knight(PieceColor.white, position);
+        _squares[position.x, position.y] = new Knight(PieceType.Knight, PieceColor.white, position);
         position = new Coords(7, 7);
-        _squares[7, 7] = new Rook(PieceColor.white, position);
+        _squares[position.x, position.y] = new Rook(PieceType.Rook, PieceColor.white, position);
     }
 }

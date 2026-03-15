@@ -2,7 +2,7 @@
 
 namespace ChessUniverse.Library.Pieces;
 
-public class Knight(PieceColor color, Coords position) : Piece(color, position)
+public class Knight(PieceType type, PieceColor color, Coords position) : Piece(type, color, position)
 {
     public override char GetSymbol() => Color == PieceColor.white ? 'N' : 'n';
     public bool IsMovePossible(Coords start, Coords final)

@@ -1,9 +1,27 @@
 ﻿using ChessUniverse.Library;
-using System.Numerics;
 
 ChessBoard chessBoard = new ChessBoard();
 chessBoard.SetStartPosition();
 PrintBoard(chessBoard);
+
+Console.WriteLine("Please enter the square: ");
+string squareStr = Console.ReadLine() ?? string.Empty;
+Console.WriteLine(squareStr);
+
+Piece? piece = chessBoard[squareStr];
+
+//Coords position = chessBoard[square];
+if (piece == null)
+{
+    Console.WriteLine("No piece found.");
+}
+else
+{
+    Console.WriteLine(piece.GetSymbol());
+}
+
+void CheckPieceMovingPossibilitie()
+{}
 
 void PrintBoard(ChessBoard chessBoard)
 {

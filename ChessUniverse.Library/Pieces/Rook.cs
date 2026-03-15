@@ -2,7 +2,7 @@
 
 namespace ChessUniverse.Library.Pieces;
 
-public class Rook(PieceColor color, Coords position) : Piece(color, position)
+public class Rook(PieceType type, PieceColor color, Coords position) : Piece(type, color, position)
 {
     public override char GetSymbol() => Color == PieceColor.white ? 'R' : 'r';
 
