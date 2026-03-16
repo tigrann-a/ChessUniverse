@@ -2,7 +2,7 @@
 
 namespace ChessUniverse.Library.Pieces;
 
-public class Pawn(PieceType type, PieceColor color, Coords position) : Piece(type, color, position)
+public class Pawn(PieceColor color) : Piece(color)
 {
     private Coords _position;
     public Coords position
@@ -13,14 +13,38 @@ public class Pawn(PieceType type, PieceColor color, Coords position) : Piece(typ
 
     public override char GetSymbol() => Color == PieceColor.white ? 'P' : 'p';
 
-    public static void IsMovePossible(Coords start, Coords final)
+    public override bool IsMovePossible(Coords start, Coords final, ChessBoard board)
     {
-        int coefficentX = Math.Abs(final.x - start.x);
-        int coefficentY = Math.Abs(final.y - start.y);
+        int dx = final.Row - start.Row;
+        int dy = final.Col - start.Col;
 
-        if (coefficentX <= 1 && coefficentY <= 1 && (coefficentX + coefficentY != 0))
-            Console.WriteLine("Yes");
-        else
-            Console.WriteLine("No");
+        // Ըստ գույնի որոշում ենք քարի շարժման ուղղությունը
+        int direction = Color == PieceColor.white ? -1 : 1;
+
+        // Ստանում ենք target դիրքում ինչ կա դրված կամ չկա
+        Piece? target = board[final.Row, final.Col];
+
+        // Եթե մեկ քայլ արաջ է գնում, ապա կարող ենք շարժել
+        if (dy == 0 && dx == direction && target == null)
+            return true;
+
+        // Ստուգում ենք արդյոք առաջին քայլ ենք կատարում, այդ դեպքում կարող ենք երկու քայլ անել
+        bool isFirstMove =
+            (Color == PieceColor.white && start.Row == 6) ||
+            (Color == PieceColor.black && start.Row == 1);
+
+        // Ստուգում ենք արդյոք դիմացը քար կա, թե ոչ
+        if (dy == 0 && dx == 2 * direction && isFirstMove)
+        {
+            int middleRow = start.Row + direction;
+            if (board[middleRow, start.Col] == null && target == null)
+                return true;
+        }
+
+        // Ստուգում ենք, եթե target դիրքում կա խաղաքար և այլ գույնի է, ապա կաորղ ենք անկյուագծով ուտել
+        if (Math.Abs(dy) == 1 && dx == direction && target != null && target.Color != Color)
+            return true;
+
+        return false;
     }
 }

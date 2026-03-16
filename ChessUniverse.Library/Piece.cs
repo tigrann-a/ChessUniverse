@@ -1,15 +1,18 @@
 ﻿using ChessUniverse.Library.Enums;
+using System.Drawing;
 
 namespace ChessUniverse.Library;
 
-public abstract class Piece(PieceType type, PieceColor color, Coords position)
+public abstract class Piece(PieceColor color)
 {
     public PieceColor Color { get; } = color;
-    public PieceType Type { get; } = type;
-    public Coords Position { get; } = position;
+    public Coords Position { get; set; }
 
 
     public abstract char GetSymbol();
 
     //public abstract void IsMovePossible(Coords start, Coords final);
+
+    public abstract bool IsMovePossible(Coords start, Coords final, ChessBoard board);
+
 }

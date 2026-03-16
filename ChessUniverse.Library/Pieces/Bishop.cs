@@ -3,10 +3,10 @@ using System.Drawing;
 
 namespace ChessUniverse.Library.Pieces;
 
-public class Bishop(PieceType type, PieceColor color, Coords position) : Piece(type, color, position)
+public class Bishop(PieceColor color) : Piece(color)
 {
     public override char GetSymbol() => Color == PieceColor.white ? 'B' : 'b';
-    public bool IsMovePossible(Coords start, Coords final)
+    public override bool IsMovePossible(Coords start, Coords final, ChessBoard board)
     {
         return true;
     }
