@@ -15,7 +15,7 @@ public class ChessBoard
 
     public static Coords? ParseCoordinate(string coordinate)
     {
-        if (string.IsNullOrWhiteSpace(coordinate) || coordinate.Length != 2)
+        if (coordinate == null || coordinate.Length != 2)
             return null;
 
         char file = char.ToLower(coordinate[0]);
