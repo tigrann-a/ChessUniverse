@@ -6,7 +6,14 @@ namespace ChessUniverse.Library;
 public class ChessBoard
 {
     private Piece?[,] _squares = new Piece?[8, 8]; // null-eri hamar
-
+    public Piece?[,] Squares
+    {
+        get; 
+        set
+        {
+            Squares = _squares;
+        } 
+    }
     public Piece? this[int row, int col]
     {
         get => _squares[row, col];
@@ -23,7 +30,7 @@ public class ChessBoard
             char rank = coordinate[1]; // 1-8
 
             int col = file - 'a';
-            int row = 7 - (rank - 1);
+            int row = 7 - (rank - '1');
 
             if (row < 0 || row > 7 || col < 0 || col > 7)
                 return null;
