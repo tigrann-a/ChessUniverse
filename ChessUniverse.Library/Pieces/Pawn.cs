@@ -11,7 +11,7 @@ public class Pawn(PieceColor color) : Piece(color)
         set => _position = value;
     }
 
-    public override char GetSymbol() => Color == PieceColor.white ? 'P' : 'p';
+    public override char GetSymbol() => Color == PieceColor.White ? 'P' : 'p';
 
     public override bool IsMovePossible(Coords start, Coords final, ChessBoard board)
     {
@@ -19,7 +19,7 @@ public class Pawn(PieceColor color) : Piece(color)
         int dy = final.Col - start.Col;
 
         // Ըստ գույնի որոշում ենք քարի շարժման ուղղությունը
-        int direction = Color == PieceColor.white ? -1 : 1;
+        int direction = Color == PieceColor.White ? -1 : 1;
 
         // Ստանում ենք target դիրքում ինչ կա դրված կամ չկա
         Piece? target = board[final.Row, final.Col];
@@ -30,8 +30,8 @@ public class Pawn(PieceColor color) : Piece(color)
 
         // Ստուգում ենք արդյոք առաջին քայլ ենք կատարում, այդ դեպքում կարող ենք երկու քայլ անել
         bool isFirstMove =
-            (Color == PieceColor.white && start.Row == 6) ||
-            (Color == PieceColor.black && start.Row == 1);
+            (Color == PieceColor.White && start.Row == 6) ||
+            (Color == PieceColor.Black && start.Row == 1);
 
         // Ստուգում ենք արդյոք դիմացը քար կա, թե ոչ
         if (dy == 0 && dx == 2 * direction && isFirstMove)

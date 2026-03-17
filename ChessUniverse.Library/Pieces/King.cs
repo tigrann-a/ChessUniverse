@@ -16,7 +16,7 @@ public class King(PieceColor color) : Piece(color) //primary constructor syntax
     // ------------------------------------------------------
 
     // override է անում Piece-ում գրված GetSymbol մեթոդը և վերադարձնում է խաղաքարի սիմվոլը
-    public override char GetSymbol() => Color == PieceColor.white ? 'K' : 'k';
+    public override char GetSymbol() => Color == PieceColor.White ? 'K' : 'k';
 
     // override է անում Piece-ում գրված IsMovePossible մեթոդը և ստուգում է կարող է խաղաքարը շարժվել․ թե ոչ
     public override bool IsMovePossible(Coords start, Coords final, ChessBoard board)

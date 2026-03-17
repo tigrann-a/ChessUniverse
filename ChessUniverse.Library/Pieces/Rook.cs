@@ -4,7 +4,7 @@ namespace ChessUniverse.Library.Pieces;
 
 public class Rook(PieceColor color) : Piece(color)
 {
-    public override char GetSymbol() => Color == PieceColor.white ? 'R' : 'r';
+    public override char GetSymbol() => Color == PieceColor.White ? 'R' : 'r';
 
     public override bool IsMovePossible(Coords start, Coords final, ChessBoard board)
     {

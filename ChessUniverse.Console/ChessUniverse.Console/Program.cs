@@ -10,8 +10,8 @@ string startSquare = (Console.ReadLine() ?? string.Empty).ToLower();
 Console.WriteLine("Please enter the final square: ");
 string finalSquare = (Console.ReadLine() ?? string.Empty).ToLower();
 
-Coords? startCoords = ChessBoard.ParseCoordinate(startSquare);
-Coords? finalCoords = ChessBoard.ParseCoordinate(finalSquare);
+Coords? startCoords = Coords.ParseCoordinate(startSquare);
+Coords? finalCoords = Coords.ParseCoordinate(finalSquare);
 
 if (startCoords == null || finalCoords == null)
 {
