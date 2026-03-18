@@ -30,7 +30,5 @@ public class King(PieceColor color) : Piece(color) //primary constructor syntax
             return true;
 
         return false;
-        
-        //return (dx <= 1 && dy <= 1) && !(dx == 0 && dy == 0);
     }
 }
