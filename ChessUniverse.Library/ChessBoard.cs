@@ -5,6 +5,13 @@ namespace ChessUniverse.Library;
 
 public class ChessBoard
 {
+    public bool isWhiteTurn = true;
+    //public bool IsWhiteTurn
+    //{
+    //    get => _isWhiteTurn; 
+    //    set => _isWhiteTurn = value;
+    //}
+
     // Ստեղծում ենք երկչափ զանգված 8 x 8
     // Piece-ի հետ դնում ենք ? (nullable օպերատոր), քանի որ զանգվածը ստեղծում ենք Piece տիպի և compiler-ը սպասում է, որ
     // այդ զանգվածի բոլոր էլեմենտները կլինեն այդ տիպի, սակայն ստեղծման պահին նրանք null-են, այդ պատճառով դնում ենք nullable օպերատորը
@@ -91,6 +98,12 @@ public class ChessBoard
         if (piece == null)
             return false;
 
+        if (!isWhiteTurn && piece.Color == PieceColor.White)
+            return false;
+
+        if (isWhiteTurn && piece.Color == PieceColor.Black)
+            return false;
+
         // եթե քայլ անել հնարավոր չէ
         if (!piece.IsMovePossible(start, final, this))
             return false;
@@ -109,6 +122,8 @@ public class ChessBoard
         
         // Piece-ի position-ը տալիս ենք խաղաքարի նոր դիրքը
         piece.Position = final;
+
+        isWhiteTurn = !isWhiteTurn;
 
         return true;
     }
