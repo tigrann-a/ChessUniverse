@@ -5,7 +5,7 @@ namespace ChessUniverse.Library;
 
 public class ChessBoard
 {
-    public bool isWhiteTurn = true;
+    private bool isWhiteTurn = true;
     //public bool IsWhiteTurn
     //{
     //    get => _isWhiteTurn; 

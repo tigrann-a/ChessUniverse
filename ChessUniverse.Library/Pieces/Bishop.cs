@@ -12,8 +12,7 @@ public class Bishop(PieceColor color) : Piece(color)
         int dy = Math.Abs(final.Col - start.Col);
         if (dx == dy)
             return true;
-        else
-            return false;
-    }
 
+        return false;
+    }
 }
