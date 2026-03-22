@@ -2,10 +2,13 @@
 
 ChessBoard chessBoard = new ChessBoard();
 chessBoard.SetStartPosition();
-PrintBoard(chessBoard);
 
-while (true)
+do
 {
+    Console.Clear();
+
+    PrintBoard(chessBoard);
+
     Console.WriteLine("Please enter the start square: ");
     string startSquare = (Console.ReadLine() ?? string.Empty).ToLower();
 
@@ -24,9 +27,9 @@ while (true)
     bool moved = chessBoard.MovePiece(startCoords.Value, finalCoords.Value);
 
     Console.WriteLine(moved ? "Move successful." : "Invalid move.");
-    PrintBoard(chessBoard);
 }
-void PrintBoard(ChessBoard chessBoard)
+while (true);
+    void PrintBoard(ChessBoard chessBoard)
 {
     Console.WriteLine("   a  b  c  d  e  f  g  h");
     Console.WriteLine("");
