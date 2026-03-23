@@ -8,12 +8,15 @@ public class Rook(PieceColor color) : Piece(color)
 
     public override bool IsMovePossible(Coords start, Coords final, ChessBoard board)
     {
+        // Քայլ անելու ուղղությունը տողերով և սյուներով, Math.Sign()-ը բացասականի դեպքում վերադարձնում է -1, 0-ի դեպքում 0, դրականի դեպքում 1
         int rowStep = Math.Sign(final.Row - start.Row);
         int colStep = Math.Sign(final.Col - start.Col);
 
+        // որոշում ենք ընթացիկ տողը և սյունը
         int currentRow = start.Row + rowStep;
         int currentCol = start.Col + colStep;
 
+        // քանի դեռ չենք հասել վերջնակետին ստուգում ենք ընթացիկ վանդակում խաղաքար կա, թե ոչ և թարմացնում ենք ընթացիկ տողի և սյունի կոորդինատները
         while(currentRow != final.Row || currentCol != final.Col)
         {
             Console.WriteLine($"{start.Row}, {final.Row}");

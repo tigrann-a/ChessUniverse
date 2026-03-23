@@ -15,8 +15,8 @@ public class Pawn(PieceColor color) : Piece(color)
 
     public override bool IsMovePossible(Coords start, Coords final, ChessBoard board)
     {
-        int dx = final.Row - start.Row;
-        int dy = final.Col - start.Col;
+        int dRow = final.Row - start.Row;
+        int dCol = final.Col - start.Col;
 
         // Ըստ գույնի որոշում ենք քարի շարժման ուղղությունը
         int direction = Color == PieceColor.White ? -1 : 1;
@@ -25,7 +25,7 @@ public class Pawn(PieceColor color) : Piece(color)
         Piece? target = board[final.Row, final.Col];
 
         // Եթե մեկ քայլ արաջ է գնում, ապա կարող ենք շարժել
-        if (dy == 0 && dx == direction && target == null)
+        if (dCol == 0 && dRow == direction && target == null)
             return true;
 
         // Ստուգում ենք արդյոք առաջին քայլ ենք կատարում, այդ դեպքում կարող ենք երկու քայլ անել
@@ -34,7 +34,7 @@ public class Pawn(PieceColor color) : Piece(color)
             (Color == PieceColor.Black && start.Row == 1);
 
         // Ստուգում ենք արդյոք դիմացը քար կա, թե ոչ
-        if (dy == 0 && dx == 2 * direction && isFirstMove)
+        if (dCol == 0 && dRow == 2 * direction && isFirstMove)
         {
             int middleRow = start.Row + direction;
             if (board[middleRow, start.Col] == null && target == null)
@@ -42,7 +42,7 @@ public class Pawn(PieceColor color) : Piece(color)
         }
 
         // Ստուգում ենք, եթե target դիրքում կա խաղաքար և այլ գույնի է, ապա կաորղ ենք անկյուագծով ուտել
-        if (Math.Abs(dy) == 1 && dx == direction && target != null && target.Color != Color)
+        if (Math.Abs(dCol) == 1 && dRow == direction && target != null && target.Color != Color)
             return true;
 
         return false;
