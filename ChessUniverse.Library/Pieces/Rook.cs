@@ -8,94 +8,108 @@ public class Rook(PieceColor color) : Piece(color)
 
     public override bool IsMovePossible(Coords start, Coords final, ChessBoard board)
     {
-        int dx = Math.Abs(final.Row - start.Row);
-        int dy = Math.Abs(final.Col - start.Col);
+        int rowStep = Math.Sign(final.Row - start.Row);
+        int colStep = Math.Sign(final.Col - start.Col);
 
-        Console.WriteLine(start.Row);
+        int currentRow = start.Row + rowStep;
+        int currentCol = start.Col + colStep;
 
-        if (dy == 0)
+        while(currentRow != final.Row || currentCol != final.Col)
         {
-            int dir = final.Row - start.Row;
-            Console.WriteLine(dir);
-            if (dir < 0)
-            {
-                for (int i = final.Row; i < start.Row; i++)
-                {
-                    //Console.WriteLine($"{i}, {start.Col}");
-                    if (board[i, start.Col] != null)
-                    {
-                        //Console.WriteLine($"{board[i, start.Col]}");
-                        return false;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
+            Console.WriteLine($"{start.Row}, {final.Row}");
+            Console.WriteLine($"{start.Col}, {final.Col}");
+            if (board[currentRow, currentCol] != null)
+            { 
+                return false;
             }
-            else if (dir > 0) 
-            {
-                for (int i = start.Row; i < final.Row; i--)
-                {
-                    //Console.WriteLine($"{i}, {start.Col}");
-                    if (board[i, start.Col] != null)
-                    {
-                        //Console.WriteLine($"{board[i, start.Col]}");
-                        return false;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-            }
-            
+
+            currentRow+=rowStep;
+            currentCol+=colStep;
         }
 
-        if (dx == 0)
-        {
-            int dir = final.Col - start.Col;
-            Console.WriteLine(dir);
-            if (dir < 0)
-            {
-                for (int i = start.Col - 1; i < final.Col; i--)
-                {
-                    Console.WriteLine($"{i}, {start.Col}");
-                    if (board[start.Row, i] != null)
-                    {
-                        Console.WriteLine($"{board[start.Row, i]}");
-                        return false;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-            }
-            else if (dir > 0)
-            {
-                for (int i = start.Col + 1; i < final.Col; i++)
-                {
-                    Console.WriteLine($"{i}, {start.Col}");
-                    if (board[start.Row, i] != null)
-                    {
-                        Console.WriteLine($"{board[start.Row, i]}");
-                        return false;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-            }
+        //if (dy == 0)
+        //{
+        //    int dir = final.Row - start.Row;
+        //    Console.WriteLine(dir);
+        //    if (dir < 0)
+        //    {
+        //        for (int i = final.Row; i < start.Row; i++)
+        //        {
+        //            //Console.WriteLine($"{i}, {start.Col}");
+        //            if (board[i, start.Col] != null)
+        //            {
+        //                //Console.WriteLine($"{board[i, start.Col]}");
+        //                return false;
+        //            }
+        //            else
+        //            {
+        //                continue;
+        //            }
+        //        }
+        //    }
+        //    else if (dir > 0) 
+        //    {
+        //        for (int i = start.Row; i < final.Row; i--)
+        //        {
+        //            //Console.WriteLine($"{i}, {start.Col}");
+        //            if (board[i, start.Col] != null)
+        //            {
+        //                //Console.WriteLine($"{board[i, start.Col]}");
+        //                return false;
+        //            }
+        //            else
+        //            {
+        //                continue;
+        //            }
+        //        }
+        //    }
 
-        }
+        //}
 
-        if (dx == 0 || dy == 0)
-        {
-            return true;
-        }
+        //if (dx == 0)
+        //{
+        //    int dir = final.Col - start.Col;
+        //    Console.WriteLine(dir);
+        //    if (dir < 0)
+        //    {
+        //        for (int i = start.Col - 1; i >= final.Col; i--)
+        //        {
+        //            Console.WriteLine($"{i}, {start.Col}");
+        //            if (board[start.Row, i] != null)
+        //            {
+        //                Console.WriteLine($"{board[start.Row, i]}");
+        //                return false;
+        //            }
+        //            else
+        //            {
+        //                continue;
+        //            }
+        //        }
+        //    }
+        //    else if (dir > 0)
+        //    {
+        //        for (int i = start.Col + 1; i < final.Col; i++)
+        //        {
+        //            Console.WriteLine($"{i}, {start.Col}");
+        //            if (board[start.Row, i] != null)
+        //            {
+        //                Console.WriteLine($"{board[start.Row, i]}");
+        //                return false;
+        //            }
+        //            else
+        //            {
+        //                continue;
+        //            }
+        //        }
+        //    }
 
-        return false;
+        //}
+
+        //if (dx == 0 || dy == 0)
+        //{
+        //    return true;
+        //}
+
+        return true;
     }
 }

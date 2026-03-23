@@ -72,11 +72,11 @@ public class ChessBoard
         _squares[0, 6] = new Knight(PieceColor.Black);
         _squares[0, 7] = new Rook(PieceColor.Black);
 
-        for (int col = 0; col < 8; col++)
-        {
-            _squares[1, col] = new Pawn(PieceColor.Black);
-            _squares[6, col] = new Pawn(PieceColor.White);
-        }
+        //for (int col = 0; col < 8; col++)
+        //{
+        //    _squares[1, col] = new Pawn(PieceColor.Black);
+        //    _squares[6, col] = new Pawn(PieceColor.White);
+        //}
 
         _squares[7, 0] = new Rook(PieceColor.White); // A1
         _squares[7, 1] = new Knight(PieceColor.White);
