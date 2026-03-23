@@ -5,7 +5,7 @@ namespace ChessUniverse.Library;
 
 public class ChessBoard
 {
-    public bool isWhiteTurn = true;
+    //public bool isWhiteTurn = true;
     //public bool IsWhiteTurn
     //{
     //    get => _isWhiteTurn; 
@@ -98,11 +98,11 @@ public class ChessBoard
         if (piece == null)
             return false;
 
-        if (!isWhiteTurn && piece.Color == PieceColor.White)
-            return false;
+        //if (!isWhiteTurn && piece.Color == PieceColor.White)
+        //    return false;
 
-        if (isWhiteTurn && piece.Color == PieceColor.Black)
-            return false;
+        //if (isWhiteTurn && piece.Color == PieceColor.Black)
+        //    return false;
 
         // եթե քայլ անել հնարավոր չէ
         if (!piece.IsMovePossible(start, final, this))
@@ -123,7 +123,7 @@ public class ChessBoard
         // Piece-ի position-ը տալիս ենք խաղաքարի նոր դիրքը
         piece.Position = final;
 
-        isWhiteTurn = !isWhiteTurn;
+        //isWhiteTurn = !isWhiteTurn;
 
         return true;
     }

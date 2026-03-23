@@ -5,7 +5,7 @@ chessBoard.SetStartPosition();
 
 do
 {
-    Console.Clear();
+    //Console.Clear();
 
     PrintBoard(chessBoard);
 
