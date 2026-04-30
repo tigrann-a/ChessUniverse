@@ -8,4 +8,66 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\BoardImage\board.png" />
+    <None Remove="Images\PieceImages\black-elephant.png" />
+    <None Remove="Images\PieceImages\black-horse.png" />
+    <None Remove="Images\PieceImages\black-king.png" />
+    <None Remove="Images\PieceImages\black-queen.png" />
+    <None Remove="Images\PieceImages\black-ship.png" />
+    <None Remove="Images\PieceImages\black-soldier.png" />
+    <None Remove="Images\PieceImages\board.png" />
+    <None Remove="Images\PieceImages\white-elephant.png" />
+    <None Remove="Images\PieceImages\white-horse.png" />
+    <None Remove="Images\PieceImages\white-king.png" />
+    <None Remove="Images\PieceImages\white-queen.png" />
+    <None Remove="Images\PieceImages\white-ship.png" />
+    <None Remove="Images\PieceImages\white-soldier.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\BoardImage\board.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\black-elephant.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\black-horse.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\black-king.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\black-queen.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\black-ship.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\black-soldier.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\board.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\white-elephant.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\white-horse.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\white-king.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\white-queen.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\white-ship.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\PieceImages\white-soldier.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>
