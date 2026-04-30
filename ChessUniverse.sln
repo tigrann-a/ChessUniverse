@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessUniverse.Library", "Ch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessUniverse.Console", "ChessUniverse.Console\ChessUniverse.Console\ChessUniverse.Console.csproj", "{327A3F27-1564-46B0-AFFC-94ED352C7373}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessUniverse.WPF", "ChessUniverse.WPF\ChessUniverse.WPF.csproj", "{46A09EC7-B441-46C1-8562-C2E3A7233A47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessUniverse_WPF", "ChessUniverse.WPF\ChessUniverse_WPF.csproj", "{46A09EC7-B441-46C1-8562-C2E3A7233A47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
