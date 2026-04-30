@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessUniverse.Library", "Ch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessUniverse.Console", "ChessUniverse.Console\ChessUniverse.Console\ChessUniverse.Console.csproj", "{327A3F27-1564-46B0-AFFC-94ED352C7373}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessUniverse_WPF", "ChessUniverse.WPF\ChessUniverse_WPF.csproj", "{46A09EC7-B441-46C1-8562-C2E3A7233A47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessUniverse_WPF", "ChessUniverse_WPF\ChessUniverse_WPF.csproj", "{E9181D34-1D81-877B-3AFA-45E6841519D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{327A3F27-1564-46B0-AFFC-94ED352C7373}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{327A3F27-1564-46B0-AFFC-94ED352C7373}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{327A3F27-1564-46B0-AFFC-94ED352C7373}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46A09EC7-B441-46C1-8562-C2E3A7233A47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46A09EC7-B441-46C1-8562-C2E3A7233A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46A09EC7-B441-46C1-8562-C2E3A7233A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46A09EC7-B441-46C1-8562-C2E3A7233A47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9181D34-1D81-877B-3AFA-45E6841519D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9181D34-1D81-877B-3AFA-45E6841519D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9181D34-1D81-877B-3AFA-45E6841519D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9181D34-1D81-877B-3AFA-45E6841519D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
